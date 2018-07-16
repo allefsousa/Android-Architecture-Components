@@ -15,6 +15,9 @@ public abstract class ClienteRoomDatabase extends RoomDatabase {
 
     private static ClienteRoomDatabase instance;
 
+    // metodo abstrato
+    public abstract DaoCliente daoCliente();
+
     static ClienteRoomDatabase getDatabase(final Context context) {
         if (instance == null) {
             synchronized (ClienteRoomDatabase.class) {
