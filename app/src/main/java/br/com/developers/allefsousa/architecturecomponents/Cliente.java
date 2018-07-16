@@ -7,6 +7,9 @@ import android.support.annotation.NonNull;
 
 /**
  * Created by allef on 15/07/2018.
+ * Modelo da tabela no banco de dados
+ *configuração da tabela
+ *
  */
 
 
@@ -17,7 +20,10 @@ public class Cliente {
     @NonNull
     @ColumnInfo(name = "name")
     private String nome;
+
     private String sobrenome;
+
+    @ColumnInfo(name = "documento")
     @NonNull
     private String cpf;
 

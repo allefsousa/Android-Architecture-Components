@@ -11,12 +11,13 @@ import java.util.List;
 
 /**
  * Created by allef on 15/07/2018.
+ * Classe dao de operações com os clientes
  */
 @Dao
 public interface DaoCliente {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void post(Cliente cliente);
+    void postCliente(Cliente cliente);
 
 
     @Query("DELETE FROM cliente_table")
