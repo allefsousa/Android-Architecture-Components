@@ -14,14 +14,19 @@ public class ClienteRepository {
     // injetando as interfaces
     private DaoCliente daoCliente;
 
-    private LiveData<List<Cliente>> liveData;
+    private LiveData<List<Cliente>> getAllClientes;
 
     public ClienteRepository(Application application) {
         ClienteRoomDatabase roomDatabase = ClienteRoomDatabase.getDatabase(application);
         daoCliente = roomDatabase.daoCliente();
-        liveData = daoCliente.getAll();
+        getAllClientes = daoCliente.getAll();
 
     }
+
+    public LiveData<List<Cliente>> getLiveData() {
+        return getAllClientes;
+    }
+
     public void insertCliente(Cliente cliente){
         new insertAsyncTask(daoCliente).execute(cliente);
 
