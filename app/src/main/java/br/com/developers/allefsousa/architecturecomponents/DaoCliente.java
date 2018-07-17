@@ -23,7 +23,7 @@ public interface DaoCliente {
     @Query("DELETE FROM cliente_table")
     void deleteAll();
 
-    @Query("SELECT * FROM word_table ORDER BY word ASC")
+    @Query("SELECT * FROM cliente_table ORDER BY name ASC")
     LiveData<List<Cliente>> getAll();
 
 
