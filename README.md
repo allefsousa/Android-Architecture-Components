@@ -7,5 +7,5 @@ src="https://github.com/allefsousa/Architecture-Components-MovileNext/blob/maste
 <br>
 
 <img src="https://github.com/allefsousa/Architecture-Components-MovileNext/blob/master/app/src/main/res/drawable/android.png" data-canonical-     
-src="https://github.com/allefsousa/Architecture-Components-MovileNext/blob/master/app/src/main/res/drawable/architecture.png" width="600" height="300" />
+src="https://github.com/allefsousa/Architecture-Components-MovileNext/blob/master/app/src/main/res/drawable/architecture.png" width="600" height="250" />
 </html>
