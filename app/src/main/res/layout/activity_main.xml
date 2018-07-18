@@ -36,7 +36,7 @@
         android:layout_alignBottom="@+id/recycler"
         android:layout_alignParentRight="true"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 
 </RelativeLayout>

@@ -22,6 +22,7 @@ public class AdicionarClienteActivity extends AppCompatActivity {
     @BindView(R.id.btnsalvar)
     Button buttonsalve;
     Cliente cc;
+    Bundle bundle = new Bundle();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +36,12 @@ public class AdicionarClienteActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(nome.getText())) {
                 setResult(RESULT_CANCELED, replyIntent);
             } else {
-
-                String cc = nome.getText().toString();
-                replyIntent.putExtra(EXTRA_REPLY, cc);
+                Cliente cliente = new Cliente();
+                cliente.setNome(nome.getText().toString());
+                cliente.setCpf(cpf.getText().toString());
+                cliente.setSobrenome(sobre.getText().toString());
+                String cc;
+                replyIntent.putExtra(EXTRA_REPLY, cliente);
                 setResult(RESULT_OK, replyIntent);
             }
 

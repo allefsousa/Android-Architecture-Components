@@ -47,8 +47,9 @@ public class AdapterCleinte extends RecyclerView.Adapter<AdapterCleinte.WordView
     @Override
     public void onBindViewHolder(@NonNull WordViewHolder holder, int position) {
         Cliente cliente = clientesList.get(position);
-
-        holder.nome.setText(cliente.getNome());
+        holder.nome.setText("Nome: "+cliente.getNome());
+        holder.Sobrenome.setText("Sobrenome: "+cliente.getSobrenome());
+        holder.cpf.setText("Cpf: "+cliente.getCpf());
     }
 
     public class WordViewHolder extends RecyclerView.ViewHolder {
@@ -59,8 +60,8 @@ public class AdapterCleinte extends RecyclerView.Adapter<AdapterCleinte.WordView
             super(itemView);
 
             nome = itemView.findViewById(R.id.tvnome);
-            Sobrenome = itemView.findViewById(R.id.inpSobre);
-            cpf = itemView.findViewById(R.id.inpCpf);
+            Sobrenome = itemView.findViewById(R.id.tvsobre);
+            cpf = itemView.findViewById(R.id.tvcpf);
          }
     }
 }

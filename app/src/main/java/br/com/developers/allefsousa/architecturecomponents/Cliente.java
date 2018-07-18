@@ -16,15 +16,40 @@ import java.io.Serializable;
 
 
 @Entity(tableName = "cliente_table")
-public class Cliente  {
+public class Cliente implements Serializable {
 
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "name")
     private String nome;
+    private String sobrenome;
+    private String cpf;
 
-    public Cliente(@NonNull String nome) {
+    public Cliente(@NonNull String nome, String sobrenome, String cpf) {
         this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.cpf = cpf;
+    }
+
+    public Cliente() {
+
+    }
+
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     @NonNull

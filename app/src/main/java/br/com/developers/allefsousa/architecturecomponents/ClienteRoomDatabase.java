@@ -28,7 +28,7 @@ public abstract class ClienteRoomDatabase extends RoomDatabase {
                     // Criar o banco de dados
                     instance = Room.databaseBuilder(
                             context.getApplicationContext(),
-                            ClienteRoomDatabase.class,"cliente_table").addCallback(sCallback)
+                            ClienteRoomDatabase.class,"cliente_table")
                             .build();
                 }
             }
@@ -36,6 +36,8 @@ public abstract class ClienteRoomDatabase extends RoomDatabase {
 
         return instance;
     }
+
+    // callback de teste do banco
     private static RoomDatabase.Callback sCallback =
             new RoomDatabase.Callback() {
                 @Override
@@ -57,10 +59,10 @@ public abstract class ClienteRoomDatabase extends RoomDatabase {
         protected Void doInBackground(final Void... params) {
             dao.deleteAll();
 
-            Cliente word1 = new Cliente("Next");
+            Cliente word1 = new Cliente("Next","next","98877");
             dao.postCliente(word1);
 
-            Cliente word = new Cliente("Movileeeee");
+            Cliente word = new Cliente("Movileeeee","mooo","5454");
             dao.postCliente(word);
 
             return null;

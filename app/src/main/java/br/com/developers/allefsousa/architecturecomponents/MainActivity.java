@@ -88,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == NEW_WORD_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
-            Cliente word = new Cliente(data.getStringExtra(AdicionarClienteActivity.EXTRA_REPLY));
-            clienteViewModel.postCliente(word);
+            Cliente aa = (Cliente) data.getExtras().getSerializable(AdicionarClienteActivity.EXTRA_REPLY);
+            clienteViewModel.postCliente(aa);
         } else {
-            Toast.makeText(getApplicationContext(), "Se deu mal !! ", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Se deu mal !! "  , Toast.LENGTH_LONG).show();
         }
     }
 }

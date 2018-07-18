@@ -13,10 +13,11 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="04dp">
        <LinearLayout
            android:layout_width="match_parent"
            android:orientation="vertical"
+           android:layout_marginLeft="10dp"
            android:layout_height="match_parent">
 
            <TextView
